@@ -1,0 +1,160 @@
+
+<html>
+<head>
+  <title>Michael Abadjiev</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" href="images/interests/2001 final render.JPG">
+</head>
+<body>
+
+	<h1>
+	<br/>
+	MICHAEL&nbspABADJIEV
+	</h1>
+	<div class="menu">
+	<a href="index.html" class="internal">
+	<b>Home</b>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<a href="about.html" class="internal">
+	About
+	</a>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<a href="Resume.html"  class="internal">
+	Resume
+	</a>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<div class="dropdown">
+			<span class="dropbtn">Projects</span>
+			<div class="dropdown-content">
+				<a href="classProjects.html">Class Projects</a>
+				<!-- <a href="clubProjects.html">Club Projects</a> -->
+				<a href="Lionfish.html">Lionfish Hunting</a>				
+				<a href="FSAE.html">Formula SAE</a>
+				<!-- <a href="personalProjects.html">Personal Projects</a> -->
+			</div>
+	</div>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<a href="gallery.html"  class="internal">
+	Gallery
+	</a>
+	<!-- <div class="dropdown">
+			<span class="dropbtn">Gallery</span>
+			<div class="dropdown-content">
+				<a href="gallery.html">Projects Gallery</a>
+				<a href="interests.html">Interests Gallery</a>
+			</div>
+	</div> -->
+	<br/>
+	</div>
+	<hr color="lightslategray"></hr>
+
+	<table cellpadding="10">
+		<tr>
+			<td class="home">
+				<div class="slideshow-container">
+					<!-- Full-width images with number and caption text -->
+					<div class="slides fade">
+						<img class="slideshow" src="images/SAE/racecar.jpg">
+					</div>
+
+					<div class="slides fade">
+						<img class="slideshow" src="images/RBE 2002/figure 1.JPG">
+					</div>
+
+					<div class="slides fade">
+						<img class="slideshow" src="images/RBE 3001/rbe3001robot.jpg">
+					</div>
+					
+					<div class="slides fade">
+						<img class="slideshow" src="images/RBE 2001/assembled robot.jpg">
+						
+					</div>
+					
+<!-- 					<div class="slides fade">
+						<img class="slideshow" src="images/SAE/tilted.JPG"  width="100%">
+					</div> -->
+
+
+					<!-- Next and previous buttons -->
+		<!--             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+					<br/>
+					<div style="text-align:center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+					<span class="dot" onclick="currentSlide(4)"></span>
+					<!-- <span class="dot" onclick="currentSlide(5)"></span> -->
+				</div>
+				</div>
+		
+		
+				<!-- The dots/circles -->
+				<br/>
+				
+			</td>
+			<td class="home">
+			Hi, I'm Michael. 
+			<br/><br/>
+			I'm a fourth year undergraduate student currently attending Worcester Polytechnic Institute (WPI), where I am completing a Bachelor of Science with a double major in Robotics Engineering and Mechanical Engineering.
+			WPI's project-based learning curriculum has allowed my to thrive and develop real-world problem solving skills by applying what we learn in class to various projects that bring the theoretical concepts to life.
+			<br/><br/>
+			Outside of regular class work my favorite activity is the Formula SAE team, where we build a formula-style racecar to compete in an international design and race competition.
+			This year I am leading the design of an all-new gear shifting system, using a geared servo to replace our old solenoid actuator, to have faster, more reliable gear shifts
+			<br/><br/>
+			In my free time, I love skiing, sailing, windsurfing, and just about any other watersport. 
+			My family has a house on Cape Cod, where we windsurf, and sail our Hobie 16 catamaran, and our favorite ski spot is Cannon Mountain in New Hampshire.
+			</td>
+		</tr>
+	</table>
+
+		
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		var slideTimer = setInterval(callback, 6000) 
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n)
+		  resetTimer()
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  slideIndex = n;
+		  resetTimer();
+		  showSlides(slideIndex);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("slides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			  slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			  dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+		
+		function callback(){
+			slideIndex = slideIndex + 1;
+			showSlides(slideIndex);
+		}
+		
+		function resetTimer(){
+			clearInterval(slideTimer);
+			slideTimer = setInterval(callback, 6000);
+		}
+		
+	</script>
+
+	
+</body>
+</html>

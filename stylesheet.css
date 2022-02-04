@@ -1,0 +1,319 @@
+/************
+Slideshow stuff
+************/
+/* Slideshow container */
+.slideshow-container {
+    max-width: 750px;
+    max-height: 500px;
+    position: relative;
+    margin-left: auto;
+}
+
+/* Hide the images by default */
+.slides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: silver;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.caption {
+  color: black;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ddeeff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #66a3ff;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+img.slideshow{
+	border-style: solid;
+	border-color: #99abbc;
+	border-width: 3px;
+	width: 90%;
+}
+
+/********
+Tags
+********/
+body {
+	/* text-align: center; */
+	font-family: Arial;
+	font-size: 100%;
+	background-color: #bbcdde;
+	/* background-color: #fef1d0; */
+	/* background-color: #D9E5FA; */
+
+}
+h1{
+	text-align: center;
+	/* font-family: Arial; */
+	font-family: Courier, Serif;
+	transform: scale(1,1.1);
+	font-size: 240%;
+}
+h2{
+	text-align: center;
+	font-family: Arial;
+	font-size: 150%;
+}
+h3{
+	text-align: center;
+	font-family: Times;
+	font-size: 100%;
+}
+a.dropdown{
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.3s;
+	font-weight: normal;
+}
+span{
+	transition-duration: 0.3s;
+}
+ul.tools{
+	list-style-type: none;
+	padding: 2px;
+	margin-top: 2px;
+	margin-left: 10px;
+}
+ul.tools > li:before{
+	
+	content: "-";
+}
+li{
+	margin-top: 1px;
+}
+table{
+	font-size: 100%;
+	margin-left:auto; 
+    margin-right:auto;
+	width:90%;
+}
+p.about{
+	font-size: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.25;
+	text-align: justify;
+}
+p.home{
+	font-size: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-right: auto;
+	line-height: 1.25;
+	text-align: center;
+}
+
+/***************
+Class CSS
+***************/
+
+.menu{
+	text-align: center;
+	text-decoration: none;
+	font-size: 100%;
+}
+div.galHead{
+	margin-top: 5;
+	font-size:120%;
+	font-weight: bold;
+	font-style: italic;
+}
+div.galRow{
+	width: 20%;
+	height: 20%;
+}
+div.projectHeader{
+	font-size: 160%;
+	margin-bottom: 3;
+	font-weight: bold;
+	float: left;
+}
+td.projectPicture{
+	width: 25%;
+	vertical-align: top;
+	align: center;
+}
+td.projectTools{
+	width: 130;
+	align: left;
+	vertical-align: top;
+}
+td.projectDescription{
+	vertical-align: top;
+	align: left;
+}
+td.galleryRow{
+	width: 30%;
+	vertical-align: middle;
+}
+td.sidebar{
+	text-align: center;
+	vertical-align: top;
+}
+td.home{
+	text-align: justify;
+	vertical-align: top;
+	width: 50%;
+}
+img {
+    image-orientation: from-image;
+}
+div.projectDate{
+	font-size: 105%;
+	float:right;
+	text-align:right;
+}
+img.gallery{
+	width: 99%;
+	border-style: solid;
+	border-color: #99abbc;
+	border-width: 3px;
+}
+img.interest{
+	width: 80%;
+	border-style: solid;
+	border-color: black;
+	border-width: 3px;
+}
+img.no_border{
+	width: 80%;
+}
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.dropbtn{
+	cursor: pointer;
+	font-weight: normal;
+}
+.dropdown{
+	position: relative;
+	display: inline-block;
+	
+}
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	text-align: left;
+	box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a{
+	color: black;
+	text-decoration: none;
+	padding: 8px 8px;
+	display: block;
+}
+a.internal{
+	font-weight:normal;
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.3s;
+}
+a.download{
+	color: blue;
+	text-decoration: underline;
+}
+a.external{
+	color: blue;
+	text-decoration: underline;
+}
+a.project{
+	text-decoration: none;
+}
+.link{
+	font-size:30%;
+	font-family: Times;
+}
+
+/************
+hover
+************/
+
+
+.dropdown:hover .dropdown-content{
+	display:block;
+}
+.dropdown:hover .dropbtn{
+	color: DimGrey;
+}
+a.internal:hover{
+	color: DimGrey;
+}
+a.download:hover{
+	color: DodgerBlue;
+}
+a.external:hover{
+	color:lightslategrey;
+}
+.dropdown-content a:hover{
+	background-color: #f1f1f1;
+}
